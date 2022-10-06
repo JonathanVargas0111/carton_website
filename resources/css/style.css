@@ -64,7 +64,6 @@ img{
     100%{
         opacity: 0;
     }
-
 }
 
 .hero div{
@@ -76,7 +75,7 @@ img{
     left: 0;
     background-size: cover;
     opacity: 0;
-    animation: heroAnimation 18s infinite;
+    animation: heroAnimation 18s infinite; 
 }
 
 .hero div:nth-child(1){
@@ -121,4 +120,61 @@ img{
     .hero .hero__down{
         width: 20%;
     }
+}
+
+/*
+    Header
+*/
+header{
+    background-color: rgb(244, 253, 253);
+    box-shadow: 1.5px 1.5px 4px #b3b3b3;
+    height: 80px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1em;
+    transition: 400ms all ease-in-out;
+}
+
+header.transparent {
+    background-color: transparent;
+    box-shadow: none;
+}
+
+header img{
+    height: 60px;
+    width: auto;
+}
+header nav a{
+    color: #232225;
+    font-weight: normal;
+    margin-left: 1em;
+    transition: 150ms ease-in-out all;
+}
+
+header.transparent nav a{
+    color: rgba(255, 255, 255, 0.9);
+}
+
+
+header nav a.active,
+header nav a:hover{
+    color: #a97c50;
+    font-size: x-large;
+    font-weight: bold;
+}
+
+header.transparent nav a.active,
+header.transparent nav a:hover{
+    color:white;
+}
+
+/*Layout*/
+.primera{
+    margin-top: 100vh;
 }
